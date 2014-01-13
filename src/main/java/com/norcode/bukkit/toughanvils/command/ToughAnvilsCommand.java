@@ -9,6 +9,7 @@ import java.util.LinkedList;
 public class ToughAnvilsCommand extends BaseCommand {
     public ToughAnvilsCommand(ToughAnvils plugin) {
         super(plugin, "toughanvils", new String[] {}, "toughanvils.command", null);
+		plugin.getServer().getPluginCommand("toughanvils").setExecutor(this);
         registerSubcommand(new SetCommand(plugin));
         registerSubcommand(new UnSetCommand(plugin));
     }

@@ -3,6 +3,7 @@ package com.norcode.bukkit.toughanvils.command;
 import com.norcode.bukkit.toughanvils.ToughAnvils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.metadata.FixedMetadataValue;
 
 import java.util.LinkedList;
 
@@ -18,6 +19,7 @@ public class UnSetCommand extends BaseCommand {
         }
 
         Player p = (Player) commandSender;
-        plugin.unSetToughAnvil(p.getEyeLocation(), p);
+		p.setMetadata("UNSETTING_TOUGH_ANVIL", new FixedMetadataValue(plugin, true));
+		p.sendMessage("Now hit an anvil to select it!");
     }
 }
