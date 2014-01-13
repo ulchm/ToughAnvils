@@ -19,6 +19,7 @@ public class ToughAnvils extends JavaPlugin {
         toughAnvilsConfig = new ConfigAccessor(this, "ToughAnvils.yml");
         getServer().getPluginManager().registerEvents(new ToughAnvilsListener(this), this);
         new ToughAnvilsCommand(this);
+        getServer().getPluginCommand("toughanvils").setExecutor(new ToughAnvilsCommand(this));
     }
 
     public void setToughAnvil(Location location, Player p) {

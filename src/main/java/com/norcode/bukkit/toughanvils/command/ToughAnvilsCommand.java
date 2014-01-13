@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import java.util.LinkedList;
 
 public class ToughAnvilsCommand extends BaseCommand {
+
     public ToughAnvilsCommand(ToughAnvils plugin) {
         super(plugin, "toughanvils", new String[] {}, "toughanvils.command", null);
         registerSubcommand(new SetCommand(plugin));

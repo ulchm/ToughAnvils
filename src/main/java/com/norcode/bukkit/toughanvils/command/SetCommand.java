@@ -1,6 +1,7 @@
 package com.norcode.bukkit.toughanvils.command;
 
 import com.norcode.bukkit.toughanvils.ToughAnvils;
+import org.bukkit.block.Block;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -19,7 +20,10 @@ public class SetCommand extends BaseCommand {
 
         Player p = (Player) commandSender;
         p.sendMessage("Setting the anvil to be tough.");
-        plugin.setToughAnvil(p.getEyeLocation(), p);
+        for (Block b: p.getLineOfSight()) {
+
+        }
+        plugin.setToughAnvil(p.getTargetBlock(), p);
 
     }
 }
