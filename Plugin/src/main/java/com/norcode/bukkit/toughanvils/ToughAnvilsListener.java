@@ -67,7 +67,7 @@ public class ToughAnvilsListener implements Listener {
     public void onInventoryClick(InventoryClickEvent event) {
         if (event.getInventory() instanceof AnvilInventory) {
 			if (event.getSlotType().equals(InventoryType.SlotType.RESULT)) {
-				final Location loc = NMS.getAnvilLocation((AnvilInventory) event.getInventory());
+				final Location loc = plugin.getAnvilLocation((AnvilInventory) event.getInventory());
 				if (loc !=  null) {
 					BlockState bs = (BlockState) loc.getBlock().getState();
 					byte b = bs.getRawData();

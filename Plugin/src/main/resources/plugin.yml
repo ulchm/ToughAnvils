@@ -1,0 +1,10 @@
+name: ${project.name}
+main: ${project.main}
+version: ${project.version}
+authors: ${project.authors}
+
+commands:
+  toughanvils:
+    description: display plugin information
+    permission: toughanvils.command
+    usage: /toughanvils [set|unset]

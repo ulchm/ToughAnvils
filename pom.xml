@@ -5,15 +5,33 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.norcode.bukkit.toughanvils</groupId>
-    <artifactId>ToughAnvils</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>ToughAnvils-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>parent</version>
+    <modules>
+        <module>API</module>
+        <module>Plugin</module>
+        <module>v1_7_R1</module>
+        <module>v1_6_R3</module>
+    </modules>
+    <scm>
+        <connection>scm:git:git://github.com/andrepl/ToughAnvils.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/andrepl/ToughAnvils.git</developerConnection>
+        <url>https://github.com/andrepl/ToughAnvils</url>
+    </scm>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.author>ulchm</project.author>
-        <project.main>com.norcode.bukkit.toughanvils.ToughAnvils</project.main>
-        <project.description>Allows indestructible anvils</project.description>
-    </properties>
+    <distributionManagement>
+        <repository>
+            <id>mvm-releases</id>
+            <name>releases</name>
+            <url>http://maven.minevsmine.com/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>mvm-snapshots</id>
+            <name>snapshots</name>
+            <url>http://maven.minevsmine.com/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <resources>
@@ -40,18 +58,4 @@
             <url>http://maven.minevsmine.com/content/groups/public/</url>
         </repository>
     </repositories>
-    <dependencies>
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.7.2-R0.2-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.7.2-R0.2-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
-
 </project>

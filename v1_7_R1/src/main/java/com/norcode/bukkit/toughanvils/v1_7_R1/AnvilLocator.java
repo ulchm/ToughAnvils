@@ -1,5 +1,6 @@
-package com.norcode.bukkit.toughanvils;
+package com.norcode.bukkit.toughanvils.v1_7_R1;
 
+import com.norcode.bukkit.toughanvils.IAnvilLocator;
 import net.minecraft.server.v1_7_R1.ContainerAnvil;
 import net.minecraft.server.v1_7_R1.ContainerAnvilInventory;
 import net.minecraft.server.v1_7_R1.World;
@@ -9,7 +10,8 @@ import org.bukkit.inventory.AnvilInventory;
 
 import java.lang.reflect.Field;
 
-public class NMS {
+public class AnvilLocator implements IAnvilLocator {
+
 	private static Field containerAnvilField;
 	private static Field anvilWorldField;
 	private static Field anvilXField;
@@ -33,7 +35,7 @@ public class NMS {
 		}
 	}
 
-	public static Location getAnvilLocation(AnvilInventory inv) {
+	public Location getAnvilLocation(AnvilInventory inv) {
 		CraftInventoryAnvil craftInv = (CraftInventoryAnvil) inv;
 		ContainerAnvilInventory nmsInv = (ContainerAnvilInventory) craftInv.getInventory();
 		try {

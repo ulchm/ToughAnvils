@@ -1,8 +1,0 @@
-main: ${project.main}
-name: ${project.name}
-version: ${project.version}
-author: ${project.author}
-
-commands:
-  toughanvils:
-    description: display plugin information

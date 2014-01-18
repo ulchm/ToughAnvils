@@ -72,7 +72,7 @@ public class ParseUtil {
         return out;
     }
 
-    public static String BlockLocationToString(Location l, boolean includeYawPitch) {
+    public static String blockLocationToString(Location l, boolean includeYawPitch) {
         String out = l.getWorld().getName() + ";";
         out += l.getBlockX() + ";" + l.getBlockY() + ";" + l.getBlockZ();
         if (includeYawPitch) {
