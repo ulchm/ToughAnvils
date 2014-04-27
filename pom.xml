@@ -11,27 +11,16 @@
     <modules>
         <module>API</module>
         <module>Plugin</module>
-        <module>v1_7_R1</module>
         <module>v1_6_R3</module>
+        <module>v1_7_R1</module>
+        <module>v1_7_R2</module>
+        <module>v1_7_R3</module>
     </modules>
     <scm>
         <connection>scm:git:git://github.com/andrepl/ToughAnvils.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/andrepl/ToughAnvils.git</developerConnection>
         <url>https://github.com/andrepl/ToughAnvils</url>
     </scm>
-
-    <distributionManagement>
-        <repository>
-            <id>mvm-releases</id>
-            <name>releases</name>
-            <url>http://maven.minevsmine.com/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>mvm-snapshots</id>
-            <name>snapshots</name>
-            <url>http://maven.minevsmine.com/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <build>
         <resources>
@@ -54,8 +43,8 @@
     </build>
     <repositories>
         <repository>
-            <id>mvm-repo</id>
-            <url>http://maven.minevsmine.com/content/groups/public/</url>
+            <id>bukkit-repo</id>
+            <url>http://repo.bukkit.org/content/groups/public/</url>
         </repository>
     </repositories>
 </project>
