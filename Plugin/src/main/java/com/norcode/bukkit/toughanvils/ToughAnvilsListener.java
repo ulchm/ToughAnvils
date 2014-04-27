@@ -65,17 +65,21 @@ public class ToughAnvilsListener implements Listener {
 
 	@EventHandler(ignoreCancelled = true)
     public void onInventoryClick(InventoryClickEvent event) {
-
         if (event.getInventory() instanceof AnvilInventory) {
 			if (event.getSlotType().equals(InventoryType.SlotType.RESULT)) {
 				final Location loc = plugin.getAnvilLocation((AnvilInventory) event.getInventory());
 				if (loc !=  null && plugin.isToughAnvil(loc)) {
-					BlockState bs = (BlockState) loc.getBlock().getState();
-					byte b = bs.getRawData();
-					b &= ~(1 << 2);
-					b &= ~(1 << 3);
-					bs.setRawData((byte)b);
-					bs.update(true, true);
+					plugin.getServer().getScheduler().runTaskLater(plugin, new Runnable() {
+						@Override
+						public void run() {
+							BlockState bs = (BlockState) loc.getBlock().getState();
+							byte b = bs.getRawData();
+							b &= ~(1 << 2);
+							b &= ~(1 << 3);
+							bs.setRawData((byte)b);
+							bs.update(true, true);
+						}
+					}, 0);
 				}
 			}
         }

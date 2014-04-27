@@ -8,9 +8,9 @@
         <version>parent</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <name>ToughAnvils v1_7_R3</name>
+    <name>ToughAnvils-v1_7_R3</name>
     <groupId>com.norcode.bukkit.toughanvils</groupId>
-    <artifactId>ToughAnvils-v1_7_R3</artifactId>
+    <artifactId>v1_7_R3</artifactId>
     <version>v1_7_R3</version>
     <packaging>jar</packaging>
 
