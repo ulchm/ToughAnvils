@@ -67,6 +67,13 @@
         </dependency>
         <dependency>
             <groupId>com.norcode.bukkit.toughanvils</groupId>
+            <artifactId>v1_7_R4</artifactId>
+            <version>v1_7_R4</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.norcode.bukkit.toughanvils</groupId>
             <artifactId>ToughAnvils-API</artifactId>
             <version>API</version>
             <type>jar</type>
